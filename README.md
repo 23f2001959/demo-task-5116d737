@@ -1,23 +1,24 @@
 # Demo Task - Captcha Solver
 
 ## Summary
-The Demo Task Captcha Solver is a Python project that aims to provide a simple and easy-to-use solution for solving captcha challenges. This project demonstrates how to utilize image processing techniques to automatically solve captcha challenges found on websites.
+This project is a simple captcha solver that uses image recognition algorithms to automatically solve captchas. It is a demonstration of how machine learning can be applied to solve real-world problems.
 
 ## Setup
-To get started with the Demo Task Captcha Solver, follow these steps:
+To set up the project, follow these steps:
 1. Clone the repository to your local machine.
-2. Install the necessary dependencies by running `pip install -r requirements.txt`.
-3. Run the `captcha_solver.py` script with your captcha image file as an argument.
+2. Install the required dependencies by running ```pip install -r requirements.txt```.
+3. Run the ```demo_task.py``` script to see the demo of the captcha solver in action.
 
 ## Usage
-Once you have set up the project, you can run the `captcha_solver.py` script with your captcha image file as an argument. The script will process the image and attempt to solve the captcha challenge. You can customize the image processing techniques used by modifying the code in the script.
-
-```bash
-python captcha_solver.py captcha_image.png
-```
+The captcha solver works by taking an image of a captcha as input and returning the solved captcha text. You can use this project as a basis for building more advanced captcha solving algorithms or integrate it into your own applications.
 
 ## Code Explanation
-The `captcha_solver.py` script uses the OpenCV library to read and process the captcha image. It applies various image processing techniques such as thresholding, erosion, dilation, and contour detection to isolate and identify individual characters in the captcha. The script then uses a pre-trained machine learning model to recognize and decode the characters, ultimately solving the captcha challenge.
+The project consists of the following files:
+- ```demo_task.py```: Main script that demonstrates the captcha solver.
+- ```captcha_solver.py```: Implementation of the captcha solving algorithm.
+- ```requirements.txt```: List of dependencies required for the project.
+
+The captcha solver uses image processing techniques and machine learning algorithms to recognize and interpret characters in the captcha image. It employs a combination of techniques such as image segmentation, feature extraction, and character recognition to accurately solve captchas.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. Feel free to use, modify, and distribute the code as needed.
+This project is licensed under the MIT License. Feel free to use, modify, and distribute it for your own purposes. See the LICENSE file for more details.
