@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Captcha Solver</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+<h1>Captcha Solver</h1>
+<p>Enter the captcha text below:</p>
+<form>
+<div class="form-group">
+<input type="text" class="form-control" id="captchaInput" placeholder="Enter Captcha Text">
+</div>
+<button type="submit" class="btn btn-primary" onclick="solveCaptcha()">Solve Captcha</button>
+</form>
+<div id="captchaResult"></div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function solveCaptcha() {
+const captchaText = document.getElementById("captchaInput").value;
+// Your captcha solving logic here
+const solvedCaptcha = "Solved Captcha: " + captchaText.split("").reverse().join("");
+document.getElementById("captchaResult").innerHTML = solvedCaptcha;
+}
+</script>
+</body>
+</html>
