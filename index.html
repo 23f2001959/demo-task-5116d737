@@ -4,27 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Captcha Solver</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-<div class="container">
-<h1>Captcha Solver</h1>
-<p>Enter the captcha text below:</p>
-<form>
+<div class="container mt-5">
+<h1 class="text-center">Captcha Solver</h1>
 <div class="form-group">
-<input type="text" class="form-control" id="captchaInput" placeholder="Enter Captcha Text">
+<label for="captchaInput">Enter Captcha:</label>
+<input type="text" class="form-control" id="captchaInput">
 </div>
-<button type="submit" class="btn btn-primary" onclick="solveCaptcha()">Solve Captcha</button>
-</form>
-<div id="captchaResult"></div>
+<button class="btn btn-primary" onclick="solveCaptcha()">Solve Captcha</button>
+<div class="mt-3">
+<h3>Result:</h3>
+<p id="result"></p>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 function solveCaptcha() {
-const captchaText = document.getElementById("captchaInput").value;
+let captchaInput = $('#captchaInput').val();
 // Your captcha solving logic here
-const solvedCaptcha = "Solved Captcha: " + captchaText.split("").reverse().join("");
-document.getElementById("captchaResult").innerHTML = solvedCaptcha;
+let result = 'Captcha solved: ' + captchaInput;
+$('#result').text(result);
 }
 </script>
 </body>
